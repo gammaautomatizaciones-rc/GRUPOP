@@ -3,43 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GRUPOP</title>
-  <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="index.css">
+  <title>Grupop - Inicio</title>
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="styles/global.css">
+  <!-- CSS Específico de Index -->
+  <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
 
-  <!-- BOTÓN HAMBURGUESA (solo en mobile con CSS) -->
-  <div class="hamburguesa" onclick="document.body.classList.toggle('menu-abierto')">
-    ☰
-  </div>
+  <!-- BOTÓN HAMBURGUESA (visible en mobile) -->
+  <div class="hamburger" id="openSideNav">☰</div>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
+  <!-- NAVBAR (visible en escritorio) -->
+  <nav class="navbar">
     <div class="logo-circle">
       <img src="img/logo.png" alt="Logo Grupop">
     </div>
     <ul>
       <li><a href="index.html" class="active">Inicio</a></li>
-      <li><a href="quienes.html">Quiénes somos</a></li>
+      <li><a href="quienes_somos.html">Quiénes somos</a></li>
       <li><a href="eventos.html">Eventos</a></li>
       <li><a href="seguinos.html">Seguinos</a></li>
     </ul>
+  </nav>
+
+  <!-- SIDENAV (oculto por defecto, aparece en mobile) -->
+  <div id="sideNav" class="side-nav">
+    <a href="index.html">Inicio</a>
+    <a href="quienes_somos.html">Quiénes somos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="seguinos.html">Seguinos</a>
   </div>
 
   <!-- HERO -->
-  <section class="hero">
+  <header class="hero" id="inicio">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="titulo-3d">GRUPOP</h1>
       <p>Fusionamos trap, pop, rock y tropical para crear un show único.</p>
     </div>
-  </section>
+  </header>
 
   <!-- BOTÓN CONTACTO -->
   <div class="contacto-flotante">
-    <a href="https://wa.me/543541389928?text=Hola,%20vi%20su%20página,%20y%20quisiera%20contratarlos" target="_blank">📩 Contactanos</a>
+    <a href="https://wa.me/543541389928?text=Hola,%20vi%20su%20página,%20y%20quisiera%20contratarlos" target="_blank">
+      📩 Contactanos
+    </a>
   </div>
 
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
