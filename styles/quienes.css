@@ -7,7 +7,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #000;
   color: #fff;
-  line-height: 1.6;
+  text-align: center;
   overflow-x: hidden;
 }
 
@@ -26,13 +26,12 @@ body {
 }
 
 .logo img {
-  height: 60px;
+  height: 65px;
   border-radius: 50%;
   border: 3px solid #000;
-  background: #000;
   margin-right: 20px;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(255,215,0,0.6); /* luz dorada */
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
 }
 
 .nav-links {
@@ -56,100 +55,67 @@ body {
   text-shadow: 0 0 12px rgba(255,215,0,1);
 }
 
-/* SECCIÓN EQUIPO */
-.equipo {
+/* SECCIÓN SEGUINOS */
+.seguinos {
   padding: 120px 20px 60px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
-  text-align: center;
 }
 
-.equipo h2 {
+.seguinos h2 {
   font-size: 2.8rem;
-  margin-bottom: 40px;
   color: #FFD700;
-  text-shadow: 
-    0 0 10px rgba(255,215,0,0.9),
-    0 0 25px rgba(255,215,0,0.7),
-    0 0 40px rgba(255,215,0,0.5);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255,215,0,0.9), 0 0 25px rgba(255,215,0,0.7);
   animation: glowPulse 2.5s infinite;
 }
 
-.integrantes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+.seguinos p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
 }
 
-.integrante {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
+/* FOTO BANDA */
+.foto-banda img {
+  width: 100%;
+  max-width: 600px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0; /* para animación scroll */
-  transform: translateY(40px);
-}
-
-.integrante:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(255,215,0,0.6);
-}
-
-.integrante img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  margin-bottom: 15px;
   border: 3px solid #FFD700;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(255,215,0,0.8);
+  box-shadow: 0 0 30px rgba(255,215,0,0.5);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
 }
 
-.integrante h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-  color: #FFD700;
-  margin-bottom: 5px;
+/* REDES */
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-.integrante .rol {
+.btn-red {
+  padding: 14px 28px;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #c8102e;
-  margin-bottom: 12px;
-  text-shadow: 0 0 6px rgba(200,16,46,0.8);
-}
-
-.integrante p {
-  font-size: 0.95rem;
-  color: #eee;
-}
-
-/* BOTÓN CONTACTO */
-.contacto-flotante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #c8102e;
-  padding: 14px 20px;
-  border-radius: 25px;
-  box-shadow: 0 0 20px rgba(200,16,46,0.9);
-  animation: pulseBtn 2s infinite;
-}
-
-.contacto-flotante a {
   color: #fff;
-  font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
-.contacto-flotante:hover {
-  background: #FFD700;
+.instagram { background: linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); }
+.youtube   { background: #ff0000; }
+.tiktok    { background: #000; border: 2px solid #25f4ee; }
+
+.btn-red:hover {
+  transform: scale(1.1);
   box-shadow: 0 0 25px rgba(255,215,0,0.9);
-}
-
-.contacto-flotante:hover a {
-  color: #000;
 }
 
 /* ANIMACIONES */
@@ -158,17 +124,12 @@ body {
   50% { text-shadow: 0 0 20px rgba(255,215,0,1), 0 0 50px rgba(255,215,0,0.9); }
 }
 
-@keyframes pulseBtn {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar { padding: 10px 20px; }
   .logo img { height: 50px; }
   .nav-links { gap: 12px; }
   .nav-links li a { font-size: 0.85rem; }
-  .equipo h2 { font-size: 2.2rem; }
-  .integrante img { width: 110px; height: 110px; }
+  .seguinos h2 { font-size: 2rem; }
+  .seguinos p { font-size: 1rem; }
+  .btn-red { font-size: 1rem; padding: 12px 20px; }
 }
