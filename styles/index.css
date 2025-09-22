@@ -34,11 +34,15 @@ body {
   border-bottom: 1px solid rgba(245,197,24,0.4);
 }
 
+/* LOGO CIRCULAR */
 .logo img {
-  height: 55px;
-  margin-right: 25px;
+  height: 40px;        
+  margin-right: 12px;
+  border-radius: 50%;  
+  border: 2px solid #000; 
 }
 
+/* LINKS DEL NAVBAR */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -46,13 +50,14 @@ body {
 }
 
 .nav-links li a {
+  position: relative;
   text-decoration: none;
-  color: #ff8000; /* naranja brillante */
+  color: #c8102e; /* rojo del logo */
   font-weight: 700;
-  font-size: 1.3rem; /* más grandes y pro */
+  font-size: 1.3rem; 
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  text-shadow: 0 0 6px rgba(255,128,0,0.7); /* glow sutil siempre encendido */
+  text-shadow: 0 0 6px rgba(200,16,46,0.6); /* glow rojo sutil */
 }
 
 .nav-links li a::after {
@@ -62,16 +67,15 @@ body {
   bottom: -5px;
   width: 0;
   height: 2px;
-  background: #f5c518;
+  background: #FFD700; /* subrayado dorado */
   transition: width 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #fff; /* al pasar queda blanco */
+  color: #FFD700; /* al pasar se pone dorado */
   text-shadow: 
-    0 0 10px rgba(255,128,0,1),
-    0 0 20px rgba(255,128,0,0.9),
-    0 0 40px rgba(255,128,0,0.7); /* glow más fuerte en hover */
+    0 0 10px rgba(255,215,0,0.9),
+    0 0 20px rgba(255,215,0,0.8);
 }
 
 .nav-links li a:hover::after {
@@ -112,7 +116,7 @@ body {
   background: linear-gradient(90deg, #FFD700, #000000); /* amarillo → negro */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #000; /* contorno negro fino */
+  -webkit-text-stroke: 1px #000; 
   text-shadow: 
     0 0 12px rgba(255,215,0,0.8),
     0 0 24px rgba(0,0,0,0.8);
@@ -127,15 +131,13 @@ body {
   font-size: 1.9rem;
   font-weight: 700;
   color: #FFD700; /* amarillo dorado */
-  -webkit-text-stroke: 1px #000; /* contorno negro */
+  -webkit-text-stroke: 1px #000; 
   text-shadow: 
-    0 0 4px rgba(0,0,0,1),   /* sombra fuerte cercana */
-    0 0 12px rgba(0,0,0,0.8), /* sombra media */
-    0 0 20px rgba(255,215,0,0.6); /* glow dorado */
+    0 0 4px rgba(0,0,0,1),
+    0 0 12px rgba(0,0,0,0.8),
+    0 0 20px rgba(255,215,0,0.6);
   animation: fadeInBlur 2s ease forwards;
 }
-
-
 
 /* ===== ANIMACIONES ===== */
 @keyframes trackingIn {
@@ -156,23 +158,23 @@ body {
   }
 
   .logo img {
-    height: 40px; /* logo más compacto */
-    margin-right: 12px;
+    height: 35px; 
+    margin-right: 10px;
   }
 
   .nav-links {
-    gap: 12px; /* menos espacio entre links */
+    gap: 12px; 
   }
 
   .nav-links li a {
-    font-size: 0.9rem; /* letras más chicas */
+    font-size: 0.85rem; /* más chicas en mobile */
   }
 
   .hero-content h1 {
-    font-size: 2.5rem; /* título más chico en hero */
+    font-size: 2.5rem; 
   }
 
   .hero-content h2 {
-    font-size: 1.1rem; /* subtítulo más chico */
+    font-size: 1.1rem; 
   }
 }
