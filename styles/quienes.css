@@ -32,6 +32,7 @@ body {
   background: #000;
   margin-right: 20px;
   object-fit: cover;
+  box-shadow: 0 0 15px rgba(255,215,0,0.6); /* luz dorada */
 }
 
 .nav-links {
@@ -46,12 +47,13 @@ body {
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;
+  text-shadow: 0 0 6px rgba(200,16,46,0.7);
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   color: #FFD700;
-  text-shadow: 0 0 10px rgba(255,215,0,0.8);
+  text-shadow: 0 0 12px rgba(255,215,0,1);
 }
 
 /* SECCIÓN EQUIPO */
@@ -63,42 +65,50 @@ body {
 }
 
 .equipo h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 40px;
   color: #FFD700;
-  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  text-shadow: 
+    0 0 10px rgba(255,215,0,0.9),
+    0 0 25px rgba(255,215,0,0.7),
+    0 0 40px rgba(255,215,0,0.5);
+  animation: glowPulse 2.5s infinite;
 }
 
 .integrantes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 35px;
 }
 
 .integrante {
   background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* para animación scroll */
+  transform: translateY(40px);
 }
 
 .integrante:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255,215,0,0.6);
 }
 
 .integrante img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin-bottom: 15px;
   border: 3px solid #FFD700;
   object-fit: cover;
+  box-shadow: 0 0 20px rgba(255,215,0,0.8);
 }
 
 .integrante h3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #FFD700;
   margin-bottom: 5px;
 }
@@ -106,12 +116,13 @@ body {
 .integrante .rol {
   font-weight: 600;
   color: #c8102e;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(200,16,46,0.8);
 }
 
 .integrante p {
   font-size: 0.95rem;
-  color: #ddd;
+  color: #eee;
 }
 
 /* BOTÓN CONTACTO */
@@ -120,9 +131,10 @@ body {
   bottom: 20px;
   right: 20px;
   background: #c8102e;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border-radius: 25px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(200,16,46,0.9);
+  animation: pulseBtn 2s infinite;
 }
 
 .contacto-flotante a {
@@ -133,20 +145,30 @@ body {
 
 .contacto-flotante:hover {
   background: #FFD700;
+  box-shadow: 0 0 25px rgba(255,215,0,0.9);
 }
 
 .contacto-flotante:hover a {
   color: #000;
 }
 
+/* ANIMACIONES */
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,215,0,0.8), 0 0 30px rgba(255,215,0,0.6); }
+  50% { text-shadow: 0 0 20px rgba(255,215,0,1), 0 0 50px rgba(255,215,0,0.9); }
+}
+
+@keyframes pulseBtn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar { padding: 10px 20px; }
-  .logo img { height: 45px; }
+  .logo img { height: 50px; }
   .nav-links { gap: 12px; }
   .nav-links li a { font-size: 0.85rem; }
-  .equipo h2 { font-size: 2rem; }
-  .integrante img { width: 100px; height: 100px; }
+  .equipo h2 { font-size: 2.2rem; }
+  .integrante img { width: 110px; height: 110px; }
 }
-
-
