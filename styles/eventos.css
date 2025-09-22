@@ -54,9 +54,9 @@ body {
 
 /* ===== SECCIÓN EVENTOS ===== */
 .seccion {
-  min-height: auto;     /* en lugar de 100vh */
+  min-height: auto;     
   margin-left: 240px;
-  padding: 60px 40px;   /* le damos aire sin pasarnos */
+  padding: 60px 40px;   
   background: rgba(0,0,0,0.6);
   border-radius: 10px;
   margin-bottom: 30px;
@@ -100,8 +100,8 @@ body {
 /* ===== BOTÓN CONTACTO ===== */
 .contacto-flotante {
   position: fixed;
-  bottom: 500px;
-  right: 1780px;
+  bottom: 20px;
+  right: 20px;
   background: linear-gradient(135deg, #ff7a00, #ffb347);
   color: #fff;
   padding: 15px 25px;
@@ -132,3 +132,69 @@ body {
   100% { transform: scale(1); }
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .evento video {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.9);
+  }
+
+  .logo-circle img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .seccion {
+    margin-left: 0;
+    padding: 80px 20px;
+  }
+
+  .seccion h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .seccion p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .evento video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto-flotante {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion h2 {
+    font-size: 1.6rem;
+  }
+
+  .seccion p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .evento video {
+    border-radius: 8px;
+  }
+}
