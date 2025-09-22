@@ -262,3 +262,32 @@ body {
     font-size: 1rem;
   }
 }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  /* Ocultar navbar lateral en mobile */
+  .navbar {
+    display: none;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1200;
+  }
+
+  /* Ajustar hero para que no quede espacio lateral */
+  .seccion, 
+  .hero-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
