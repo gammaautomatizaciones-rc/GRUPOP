@@ -53,6 +53,15 @@ body::before {
   color: #ff7a00;
 }
 
+/* ===== LOGO ===== */
+.logo-circle img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255,122,0,0.8);
+  margin-bottom: 30px;
+}
+
 /* ===== SECCIÓN ===== */
 .seccion {
   min-height: 100vh;
@@ -62,6 +71,7 @@ body::before {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 80px 40px;
 }
 
 .seccion h2 {
@@ -77,14 +87,6 @@ body::before {
   color: #eee;
   text-shadow: 0 0 10px rgba(0,0,0,0.9);
 }
-/* ===== LOGO ===== */
-.logo-circle img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255,122,0,0.8);
-  margin-bottom: 30px;
-}
 
 /* ===== FOTO BANDA ===== */
 .foto-banda {
@@ -94,19 +96,18 @@ body::before {
 }
 
 .foto-banda img {
-  width: 95%;             /* ocupa casi todo el ancho disponible */
-  max-width: 1200px;      /* no se deforma en pantallas grandes */
-  max-height: 80vh;       /* nunca más alta que la pantalla */
-  object-fit: cover;      /* recorta si hace falta */
+  width: 95%;
+  max-width: 1200px;
+  max-height: 80vh;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(255,122,0,1);
   transition: transform 0.4s ease;
 }
 
 .foto-banda img:hover {
-  transform: scale(1.03); /* efecto sutil al pasar el mouse */
+  transform: scale(1.03);
 }
-
 
 /* ===== BOTONES REDES ===== */
 .redes {
@@ -136,5 +137,78 @@ body::before {
 
 /* Colores con efecto glow */
 .instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); box-shadow: 0 0 15px #d62976; }
-.youtube { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
-.tiktok { background: linear-gradient(45deg, #69c9d0, #ee1d52, #000); box-shadow: 0 0 15px #ee1d52; }
+.youtube   { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
+.tiktok    { background: linear-gradient(45deg, #69c9d0, #ee1d52, #000); box-shadow: 0 0 15px #ee1d52; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .seccion h2 {
+    font-size: 2.5rem;
+  }
+  .seccion p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.9);
+  }
+
+  .logo-circle img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .seccion {
+    margin-left: 0;
+    padding: 100px 20px 40px;
+  }
+
+  .seccion h2 {
+    font-size: 2rem;
+  }
+
+  .seccion p {
+    font-size: 1rem;
+  }
+
+  .foto-banda img {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .btn-red {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion {
+    padding: 80px 15px;
+  }
+
+  .seccion h2 {
+    font-size: 1.6rem;
+  }
+
+  .seccion p {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .btn-red {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
