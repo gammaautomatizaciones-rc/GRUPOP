@@ -1,0 +1,156 @@
+/* ===== FONDO ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("../img/fondoprincipal.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 20px 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ff7a00;
+}
+
+/* ===== LOGO ===== */
+.logo-circle img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255,122,0,0.8);
+  margin-bottom: 30px;
+}
+
+/* ===== SECCIÓN INTEGRANTES ===== */
+.seccion {
+  min-height: 100vh;
+  padding: 120px;
+  margin-left: 240px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.seccion h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  color: #ff7a00;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Cada integrante como fila */
+.integrante {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.integrante:nth-child(even) {
+  flex-direction: row-reverse; /* alterna lados */
+}
+
+.integrante img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.integrante .texto {
+  flex: 1;
+  color: #fff;
+}
+
+.integrante h3 {
+  margin: 0 0 10px;
+  color: #ff7a00;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.integrante p {
+  margin: 0 0 8px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Hover */
+.integrante:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255,122,0,0.7);
+}
+
+/* ===== BOTÓN CONTACTO ===== */
+.contacto-flotante {
+  position: fixed;
+  bottom: 900px;
+  right: 100px;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  z-index: 1100;
+}
+
+.contacto-flotante:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.contacto-flotante a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+

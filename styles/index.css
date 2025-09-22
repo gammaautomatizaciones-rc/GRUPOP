@@ -1,0 +1,249 @@
+/* ===== FONDO GENERAL ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("../img/fondoprincipal.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  backdrop-filter: brightness(0.7); /* oscurece un toque el fondo */
+}
+
+/* ===== NAVBAR (NAVEGACIÓN LATERAL IZQUIERDA) ===== */
+.navbar {
+  position: fixed;
+  left: 0;            /* izquierda para nav lateral */
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 20px 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff7a00;
+}
+
+/* ===== LOGO ===== */
+.logo-circle img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255,122,0,0.8);
+  margin-bottom: 30px;
+}
+
+/* ===== SECCIONES ===== */
+.seccion {
+  min-height: 100vh;
+  padding: 120px;
+  margin-left: 240px;   /* espacio para la navbar izquierda */
+  background: rgba(0,0,0,0.5); /* overlay para mejorar lectura */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Regla para hacer que las secciones aparezcan con un efecto sencillo (opcional) */
+.hidden { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.visible { opacity: 1; transform: none; }
+
+/* ===== INTEGRANTES (GRID MODERNO) ===== */
+.grid-integrantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1rem 0;
+}
+.grid-integrantes .integrante {
+  text-align: center;
+}
+.grid-integrantes .integrante img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+.grid-integrantes .integrante h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+.grid-integrantes .integrante p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Ejemplo de ajuste para pantallas grandes (opcional) */
+@media (min-width: 768px) {
+  .grid-integrantes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Opcional: hover ligero para destacar cada integrante */
+.grid-integrantes .integrante:hover img {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* ===== EVENTOS ===== */
+.evento {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.evento video, .evento img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,122,0,0.6);
+}
+
+/* ===== BOTÓN CONTACTANOS ===== */
+/* Reubicar el botón para que no se oculen con la navbar (esquina inferior derecha) */
+.contacto-flotante {
+  position: fixed;
+  bottom: 900px;
+  right: 100px;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  z-index: 1100;
+}
+
+.contacto-flotante:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.contacto-flotante a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Animación botón */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===== HERO PRINCIPAL HD ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../img/fondoprincipal.jpeg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}d
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* ===== TÍTULO 3D POTENCIADO CON SOMBRA NEGRA ===== */
+.titulo-3d {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #ff7a00;
+
+  /* Sombras en capas con negro */
+  text-shadow: 
+    2px 2px 0 #000,
+    4px 4px 0 #000,
+    6px 6px 0 #000,
+    8px 8px 20px rgba(0,0,0,1),
+    0 0 25px rgba(255,122,0,0.8),
+    0 0 50px rgba(255,180,71,1);
+
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      2px 2px 0 #000,
+      4px 4px 0 #000,
+      6px 6px 0 #000,
+      8px 8px 20px rgba(0,0,0,1),
+      0 0 15px rgba(255,122,0,0.6),
+      0 0 30px rgba(255,180,71,0.7);
+  }
+  to {
+    text-shadow: 
+      2px 2px 0 #000,
+      4px 4px 0 #000,
+      6px 6px 0 #000,
+      8px 8px 30px rgba(0,0,0,1),
+      0 0 40px rgba(255,122,0,1),
+      0 0 70px rgba(255,180,71,1);
+  }
+}
+
+/* Subtítulo aún más llamativo */
+.hero-content p {
+  font-size: 2.2rem; /* más grande */
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 
+    2px 2px 0 #000,
+    4px 4px 10px rgba(0,0,0,0.9),
+    0 0 15px rgba(255,122,0,0.8),
+    0 0 30px rgba(255,180,71,1);
+  animation: glowSub 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowSub {
+  from {
+    text-shadow: 
+      2px 2px 0 #000,
+      4px 4px 10px rgba(0,0,0,0.9),
+      0 0 10px rgba(255,122,0,0.7),
+      0 0 20px rgba(255,180,71,0.8);
+  }
+  to {
+    text-shadow: 
+      2px 2px 0 #000,
+      4px 4px 15px rgba(0,0,0,1),
+      0 0 25px rgba(255,122,0,1),
+      0 0 45px rgba(255,180,71,1);
+  }
+}

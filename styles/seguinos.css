@@ -1,0 +1,140 @@
+/* ===== FONDO ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("../img/fondoprincipal.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+/* Overlay para dar contraste */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+  z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 20px 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ff7a00;
+}
+
+/* ===== SECCIÓN ===== */
+.seccion {
+  min-height: 100vh;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.seccion h2 {
+  margin-bottom: 20px;
+  font-size: 3.2rem;
+  color: #ff7a00;
+  text-shadow: 0 0 15px rgba(255, 122, 0, 0.9), 0 0 25px rgba(255,180,71,0.8);
+}
+
+.seccion p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #eee;
+  text-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+/* ===== LOGO ===== */
+.logo-circle img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255,122,0,0.8);
+  margin-bottom: 30px;
+}
+
+/* ===== FOTO BANDA ===== */
+.foto-banda {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.foto-banda img {
+  width: 95%;             /* ocupa casi todo el ancho disponible */
+  max-width: 1200px;      /* no se deforma en pantallas grandes */
+  max-height: 80vh;       /* nunca más alta que la pantalla */
+  object-fit: cover;      /* recorta si hace falta */
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255,122,0,1);
+  transition: transform 0.4s ease;
+}
+
+.foto-banda img:hover {
+  transform: scale(1.03); /* efecto sutil al pasar el mouse */
+}
+
+
+/* ===== BOTONES REDES ===== */
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-red {
+  padding: 18px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  transition: all 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-red:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(255,255,255,0.8);
+}
+
+/* Colores con efecto glow */
+.instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); box-shadow: 0 0 15px #d62976; }
+.youtube { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
+.tiktok { background: linear-gradient(45deg, #69c9d0, #ee1d52, #000); box-shadow: 0 0 15px #ee1d52; }
