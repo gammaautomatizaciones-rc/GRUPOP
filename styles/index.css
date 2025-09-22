@@ -34,14 +34,16 @@ body {
   border-bottom: 1px solid rgba(245,197,24,0.4);
 }
 
-/* LOGO CIRCULAR */
+/* LOGO CIRCULAR MÁS GRANDE Y DEFINIDO */
 .logo img {
-  height: 40px;        
-  margin-right: 12px;
-  border-radius: 50%;  
-  border: 2px solid #000; 
+  height: 60px;              /* más grande */
+  margin-right: 15px;
+  border-radius: 50%;        /* lo hace circular */
+  border: 3px solid #000;    /* marco negro más grueso */
+  object-fit: cover;         /* mantiene proporción dentro del círculo */
+  background: #000;          /* fondo negro para que resalte */
+  box-shadow: 0 0 12px rgba(0,0,0,0.8); /* sombra sutil para dar volumen */
 }
-
 /* LINKS DEL NAVBAR */
 .nav-links {
   display: flex;
@@ -178,3 +180,4 @@ body {
     font-size: 1.1rem; 
   }
 }
+
