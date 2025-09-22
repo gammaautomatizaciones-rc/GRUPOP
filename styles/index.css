@@ -152,24 +152,27 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 12px 20px;
+    padding: 10px 20px;
   }
 
   .logo img {
-    height: 45px;
-    margin-right: 15px;
+    height: 40px; /* logo más compacto */
+    margin-right: 12px;
   }
 
   .nav-links {
-    gap: 15px;
+    gap: 12px; /* menos espacio entre links */
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem; /* letras más chicas */
   }
 
   .hero-content h1 {
-    font-size: 2.8rem;
-    letter-spacing: 3px;
+    font-size: 2.5rem; /* título más chico en hero */
   }
 
   .hero-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* subtítulo más chico */
   }
 }
