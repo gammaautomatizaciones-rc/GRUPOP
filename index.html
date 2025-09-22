@@ -3,36 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupop - RockPop</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <title>GRUPOP</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- HERO PRINCIPAL (añadir id para anclar Inicio) -->
-  <header class="hero" id="inicio">
+
+  <!-- BOTÓN HAMBURGUESA (solo en mobile con CSS) -->
+  <div class="hamburguesa" onclick="document.body.classList.toggle('menu-abierto')">
+    ☰
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo-circle">
+      <img src="img/logo.png" alt="Logo Grupop">
+    </div>
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="quienes.html">Quiénes somos</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="seguinos.html">Seguinos</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="titulo-3d">GRUPOP</h1>
       <p>Fusionamos trap, pop, rock y tropical para crear un show único.</p>
     </div>
-  </header>
+  </section>
 
-  <!-- NAVBAR (actual izquierda) -->
-  <nav class="navbar" aria-label="Navegación principal" role="navigation">
-    <div class="logo-circle">
-      <img src="img/logo.png" alt="Logo Grupop">
-    </div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="quienes_somos.html">Quiénes somos</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="seguinos.html">Seguinos</a></li>
-    </ul>
-  </nav>
+  <!-- BOTÓN CONTACTO -->
+  <div class="contacto-flotante">
+    <a href="https://wa.me/543541389928?text=Hola,%20vi%20su%20página,%20y%20quisiera%20contratarlos" target="_blank">📩 Contactanos</a>
+  </div>
 
-  <!-- RECUADRO CONTACTANOS -->
-<div class="contacto-flotante" id="contacto">
-  <p>📩<a href="https://wa.me/543541389928?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20shows.%20Me%20gustar%C3%ADa%20conversar%20sobre%20la%20posibilidad%20de%20contratarlos." target="_blank">Contactanos</a></p>
-</div>
-
-
+</body>
 </html>
