@@ -122,8 +122,8 @@ body {
 /* ===== BOTÓN CONTACTO ===== */
 .contacto-flotante {
   position: fixed;
-  bottom: 900px;
-  right: 100px;
+  bottom: 20px;
+  right: 20px;
   background: linear-gradient(135deg, #ff7a00, #ffb347);
   color: #fff;
   padding: 15px 25px;
@@ -154,3 +154,90 @@ body {
   100% { transform: scale(1); }
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .integrante img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.9);
+  }
+
+  .logo-circle img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .seccion {
+    margin-left: 0;
+    padding: 80px 20px;
+  }
+
+  .integrante {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .integrante:nth-child(even) {
+    flex-direction: column; /* ya no alterna en mobile */
+  }
+
+  .integrante img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .integrante .texto {
+    margin-top: 15px;
+  }
+
+  .seccion h2 {
+    font-size: 2rem;
+  }
+
+  .integrante h3 {
+    font-size: 1.5rem;
+  }
+
+  .integrante p {
+    font-size: 0.95rem;
+  }
+
+  .contacto-flotante {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion {
+    padding: 60px 15px;
+  }
+
+  .integrante img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .integrante h3 {
+    font-size: 1.3rem;
+  }
+
+  .integrante p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
