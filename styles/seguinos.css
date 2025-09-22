@@ -1,115 +1,96 @@
-/* ===== FONDO ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap');
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("../img/fondoprincipal.jpeg") no-repeat center center fixed;
-  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
   color: #fff;
-  position: relative;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-/* Overlay para dar contraste */
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
-  z-index: -1;
-}
-
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
   position: fixed;
-  left: 0;
   top: 0;
-  height: 100%;
-  width: 220px;
-  background: rgba(0,0,0,0.8);
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding: 15px 40px;
   z-index: 1000;
+  background: rgba(0,0,0,0.9);
+  border-bottom: 1px solid rgba(245,197,24,0.3);
 }
 
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li {
-  margin: 20px 0;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  color: #ff7a00;
-}
-
-/* ===== LOGO ===== */
-.logo-circle img {
-  width: 120px;
-  height: 120px;
+.logo img {
+  height: 65px;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255,122,0,0.8);
-  margin-bottom: 30px;
-}
-
-/* ===== SECCIÓN ===== */
-.seccion {
-  min-height: 100vh;
-  margin-left: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 40px;
-}
-
-.seccion h2 {
-  margin-bottom: 20px;
-  font-size: 3.2rem;
-  color: #ff7a00;
-  text-shadow: 0 0 15px rgba(255, 122, 0, 0.9), 0 0 25px rgba(255,180,71,0.8);
-}
-
-.seccion p {
-  font-size: 1.3rem;
-  margin-bottom: 40px;
-  color: #eee;
-  text-shadow: 0 0 10px rgba(0,0,0,0.9);
-}
-
-/* ===== FOTO BANDA ===== */
-.foto-banda {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.foto-banda img {
-  width: 95%;
-  max-width: 1200px;
-  max-height: 80vh;
+  border: 3px solid #000;
+  margin-right: 20px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(255,122,0,1);
-  transition: transform 0.4s ease;
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
 }
 
-.foto-banda img:hover {
-  transform: scale(1.03);
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
-/* ===== BOTONES REDES ===== */
+.nav-links li a {
+  text-decoration: none;
+  color: #c8102e;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 6px rgba(200,16,46,0.7);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #FFD700;
+  text-shadow: 0 0 12px rgba(255,215,0,1);
+}
+
+/* SECCIÓN SEGUINOS */
+.seguinos {
+  padding: 120px 20px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.seguinos h2 {
+  font-size: 2.8rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255,215,0,0.9), 0 0 25px rgba(255,215,0,0.7);
+  animation: glowPulse 2.5s infinite;
+}
+
+.seguinos p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* FOTO BANDA */
+.foto-banda img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 30px rgba(255,215,0,0.5);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+/* REDES */
 .redes {
   display: flex;
   justify-content: center;
@@ -118,97 +99,37 @@ body::before {
 }
 
 .btn-red {
-  padding: 18px 40px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #fff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  transition: all 0.3s ease, transform 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
+
+.instagram { background: linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); }
+.youtube   { background: #ff0000; }
+.tiktok    { background: #000; border: 2px solid #25f4ee; }
 
 .btn-red:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 30px rgba(255,255,255,0.8);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255,215,0,0.9);
 }
 
-/* Colores con efecto glow */
-.instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); box-shadow: 0 0 15px #d62976; }
-.youtube   { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
-.tiktok    { background: linear-gradient(45deg, #69c9d0, #ee1d52, #000); box-shadow: 0 0 15px #ee1d52; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .seccion h2 {
-    font-size: 2.5rem;
-  }
-  .seccion p {
-    font-size: 1.1rem;
-  }
+/* ANIMACIONES */
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,215,0,0.8), 0 0 30px rgba(255,215,0,0.6); }
+  50% { text-shadow: 0 0 20px rgba(255,215,0,1), 0 0 50px rgba(255,215,0,0.9); }
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.9);
-  }
-
-  .logo-circle img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0;
-  }
-
-  .seccion {
-    margin-left: 0;
-    padding: 100px 20px 40px;
-  }
-
-  .seccion h2 {
-    font-size: 2rem;
-  }
-
-  .seccion p {
-    font-size: 1rem;
-  }
-
-  .foto-banda img {
-    border-radius: 12px;
-    width: 100%;
-  }
-
-  .btn-red {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .seccion {
-    padding: 80px 15px;
-  }
-
-  .seccion h2 {
-    font-size: 1.6rem;
-  }
-
-  .seccion p {
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-  }
-
-  .btn-red {
-    font-size: 0.9rem;
-    padding: 10px 18px;
-  }
+  .logo img { height: 50px; }
+  .nav-links { gap: 12px; }
+  .nav-links li a { font-size: 0.85rem; }
+  .seguinos h2 { font-size: 2rem; }
+  .seguinos p { font-size: 1rem; }
+  .btn-red { font-size: 1rem; padding: 12px 20px; }
 }
